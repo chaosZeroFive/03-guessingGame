@@ -1,2 +1,9 @@
 /* CSS Document */
 
+#back-image{
+    display: block;
+}
+
+.form-control{
+    text-align: center;
+}
