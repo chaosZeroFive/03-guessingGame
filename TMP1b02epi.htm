@@ -28,7 +28,7 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <span class="badge badge-primary">Total Wins</span>
-                <div id="totalWins"></span>
+                <span id="totalWins"></span>
             </li>
             <li class="nav-item active">
                 <span class="badge badge-primary">Current Word</span>
@@ -167,8 +167,6 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
             document.getElementById("remainingGuesses").innerText = numGuess
             document.getElementById("guessedLetters").innerText =  guessedLetters.join(" ")
         }
-        
-        
         var s = document.getElementById("currentWord");
         var l = s.length;
         

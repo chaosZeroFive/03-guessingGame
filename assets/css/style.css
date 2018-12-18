@@ -1,9 +1,40 @@
 /* CSS Document */
 
 #back-image{
-    display: block;
+    z-index: 1;
+    position: relative;
 }
 
 .form-control{
     text-align: center;
+}
+
+.ltr{
+    
+}
+
+#l1{
+    
+}
+
+#l2{
+    
+}
+
+#l3{
+    
+}
+
+.col{
+    text-align: center;
+}
+
+.container1{
+    width: 400px;
+    height: 323;
+    background-color: #000000;
+}
+
+.container2{
+     width: 50%;
 }
