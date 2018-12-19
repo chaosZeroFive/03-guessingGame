@@ -24,11 +24,12 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
 </head>
 
 <body>
-    <nav class="navbar navbar-dark"> <span class="navbar">GeoGuess Game</span>
+    <nav class="navbar navbar-dark">
+        <span class="navbar">GeoGuess Game</span>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <span class="badge badge-primary">Total Wins</span>
-                <div id="totalWins"></span>
+                <div id="totalWins"></div>
             </li>
             <li class="nav-item active">
                 <span class="badge badge-primary">Current Word</span>
@@ -46,6 +47,13 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
     </nav>
     <hr>
     
+    <div id="ttlWins" class="container">
+        <div class="row">
+            <div class="col-sm">
+                
+            </div>
+        </div>        
+    </div>
     <div class="container container1">
         <div class="row">
             <div class="col"> <img src="assets/images/1x/north-america.png" class="img-fluid" id="back-image" alt="revealed-image"> <img src="assets/images/1x/mask1.png" class="mask1" alt="mask"> <img src="assets/images/1x/mask2.png" class="mask2" alt="mask"> <img src="assets/images/1x/mask3.png" class="mask3" alt="mask"> <img src="assets/images/1x/mask4.png" class="mask4" alt="mask"> <img src="assets/images/1x/mask5.png" class="mask5" alt="mask"> <img src="assets/images/1x/mask6.png" class="mask6" alt="mask"> <img src="assets/images/1x/mask7.png" class="mask7" alt="mask"> <img src="assets/images/1x/mask8.png" class="mask8" alt="mask"> <img src="assets/images/1x/mask9.png" class="mask9" alt="mask"> <img src="assets/images/1x/mask10.png" class="mask10" alt="mask"> <img src="assets/images/1x/mask11.png" class="mask11" alt="mask"> <img src="assets/images/1x/mask12.png" class="mask12" alt="mask"> </div>
@@ -56,7 +64,7 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
     <div class="container container2">
         <div class="row">
             <div class="col col-1">
-                <div id="currentWord"></div>
+                <div id=""></div>
             </div>
         </div>
     </div>
@@ -99,6 +107,8 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
                     guessingWord[i] = letter
                     foundLetter = true
                     correctSound.play()
+                    for (var i = 0, l = )
+                    toggle("mask9", "none")
                     // If guessing word matches random word
                     if (guessingWord.join("") === wordToMatch) {
                         // Increment # of wins
@@ -168,23 +178,19 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
             document.getElementById("guessedLetters").innerText =  guessedLetters.join(" ")
         }
         
-        
-        var s = document.getElementById("currentWord");
-        var l = s.length;
-        
-        console.log(l);
+
             //toggle function sets the display for image mask blocks when the player selects a correct letter
             //toggle('mask1', 'block'); // Shows
             //toggle('mask1', 'none'); // hides
 
             //document.getElementById("l1").innerHTML = "Value of l1";
 
-            //function toggle(className, displayState){
-                //var elements = document.getElementsByClassName(className)
-                //for (var i = 0; i < elements.length; i++){
-                    //elements[i].style.display = displayState;
-                //}
-            //}
+            function toggle(className, displayState){
+                var elements = document.getElementsByClassName(className)
+                for (var i = 0; i < elements.length; i++){
+                    elements[i].style.display = displayState;
+                }
+            }
         </script> 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> 
