@@ -13,18 +13,6 @@
     
 }
 
-#l1{
-    
-}
-
-#l2{
-    
-}
-
-#l3{
-    
-}
-
 .col{
     text-align: center;
 }
@@ -41,4 +29,14 @@
 
 #ttlWins{
     width: 25%;
+}
+
+.game-info{
+    align-content: flex-end;
+}
+
+.info-elem{
+    display: flex;
+    width: 10em;
+    align-items: flex-end;
 }

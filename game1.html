@@ -42,6 +42,11 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
                 <span class="badge badge-primary">Guesses Remaining</span>
                 <span id="remainingGuesses"></span>
             </li>
+            
+            <li class="nav-item active">
+                <span class="badge badge-primary">Word Length</span>
+                <span id="wordLength"></span>
+            </li>
         </ul>
     </nav>
     <hr>
@@ -55,7 +60,21 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
     </div>
     <div class="container container1">
         <div class="row">
-            <div class="col"> <img src="assets/images/1x/north-america.png" class="img-fluid" id="back-image" alt="revealed-image"> <img src="assets/images/1x/mask1.png" class="mask1" alt="mask"> <img src="assets/images/1x/mask2.png" class="mask2" alt="mask"> <img src="assets/images/1x/mask3.png" class="mask3" alt="mask"> <img src="assets/images/1x/mask4.png" class="mask4" alt="mask"> <img src="assets/images/1x/mask5.png" class="mask5" alt="mask"> <img src="assets/images/1x/mask6.png" class="mask6" alt="mask"> <img src="assets/images/1x/mask7.png" class="mask7" alt="mask"> <img src="assets/images/1x/mask8.png" class="mask8" alt="mask"> <img src="assets/images/1x/mask9.png" class="mask9" alt="mask"> <img src="assets/images/1x/mask10.png" class="mask10" alt="mask"> <img src="assets/images/1x/mask11.png" class="mask11" alt="mask"> <img src="assets/images/1x/mask12.png" class="mask12" alt="mask"> </div>
+            <div class="col">
+                <img src="assets/images/1x/north-america.png" class="img-fluid" id="back-image" alt="revealed-image">
+                <img src="assets/images/1x/mask1.png" class="mask1" alt="mask">
+                <img src="assets/images/1x/mask2.png" class="mask2" alt="mask">
+                <img src="assets/images/1x/mask3.png" class="mask3" alt="mask">
+                <img src="assets/images/1x/mask4.png" class="mask4" alt="mask">
+                <img src="assets/images/1x/mask5.png" class="mask5" alt="mask">
+                <img src="assets/images/1x/mask6.png" class="mask6" alt="mask">
+                <img src="assets/images/1x/mask7.png" class="mask7" alt="mask">
+                <img src="assets/images/1x/mask8.png" class="mask8" alt="mask">
+                <img src="assets/images/1x/mask9.png" class="mask9" alt="mask">
+                <img src="assets/images/1x/mask10.png" class="mask10" alt="mask">
+                <img src="assets/images/1x/mask11.png" class="mask11" alt="mask">
+                <img src="assets/images/1x/mask12.png" class="mask12" alt="mask">
+            </div>
         </div>
     </div>
     <hr>
@@ -113,6 +132,28 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
     </div>
     
     <script>
+        
+        //******variables******
+            //pauseGame:  boolean
+            //guessedLetters:  array
+            //guessingWord:  array
+            //wordToMatch:  string
+            //numGuess:  number  
+            //wins: number
+            //foundLetter: 
+            //correctSound
+            //incorrectSound
+            //elements
+            //attributes
+        
+        /******Pseudo Code******
+        application selects 
+        
+        */
+        
+        
+        
+        
         // array of possible words
 	var possibleWords = ['North America', 'South America', 'Asia', 'Australia', 'Europe', 'Africa']
 	const maxGuess = 10
@@ -137,10 +178,12 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
 	// Check if letter is in word & process
 	function checkForLetter(letter) {
 		var foundLetter = false
+            
 			var correctSound = document.createElement('audio')
 			var incorrectSound = document.createElement('audio')
 			correctSound.setAttribute('src', 'assets/sounds/not-bad.mp3')
 			incorrectSound.setAttribute('src', 'assets/sounds/gets-in-the-way.mp3')
+            
 			// Search string for letter
 			for (var i = 0, j = wordToMatch.length; i < j; i++) {
 				if (letter === wordToMatch[i]) {
@@ -176,25 +219,17 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
 			updateDisplay()
 	}
     
-    //hide mask images
-    //function hideMask(){
-
-	//}
-    
-    
-    
 	// Check in keypressed is between A-Z or a-z
 	function isAlpha(ch) {
 		return /^[A-Z]$/i.test(ch)
 	}
+        
 	function resetGame() {
 		numGuess = maxGuess
 			pauseGame = false
 
 			// Get a new word
-			wordToMatch = possibleWords[
-				Math.floor(Math.random() * possibleWords.length)
-			].toUpperCase()
+			wordToMatch = possibleWords[Math.floor(Math.random() * possibleWords.length)].toUpperCase()
 			console.log(wordToMatch)
 			
 			// Reset word arrays
@@ -207,25 +242,26 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
 				// Put a space instead of an underscore between multi word "words"
 				if (wordToMatch[i] === ' ') {
 					guessingWord.push(' ')
-				} else {
+				}
+                else {
 					guessingWord.push('_')
 				}
 			}
 			// Update the Display
 			updateDisplay()
 	}
+        
 	function updateDisplay() {
 		document.getElementById('totalWins').innerText = wins
-			document.getElementById('currentWord').innerText = guessingWord.join('')
-			document.getElementById('remainingGuesses').innerText = numGuess
-			document.getElementById('guessedLetters').innerText = guessedLetters.join(' ')
+        document.getElementById('currentWord').innerText = guessingWord.join('')
+        document.getElementById('remainingGuesses').innerText = numGuess
+        document.getElementById('guessedLetters').innerText = guessedLetters.join(' ')
+        document.getElementById('wordLength').innerText = currentWord.length
 	}
-	// toggle() function sets the display for image mask blocks
-	// toggle('mask1', 'block'); // Shows
-	// toggle('mask1', 'none'); // hides
-
-        
-        // document.getElementById("l1").innerHTML = "Value of l1";
+            // document.getElementById("l1").innerHTML = "Value of l1";
+            // toggle() function sets the display for image mask blocks
+	       // toggle('mask1', 'block'); // Shows
+	       // toggle('mask1', 'none'); // hides
 	function toggle(className, displayState) {
 		var elements = document.getElementsByClassName(className);
 			for (var i = 0; i < elements.length; i++) {

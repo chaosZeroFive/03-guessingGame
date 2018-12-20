@@ -1,5 +1,6 @@
 @charset "utf-8";
-	.mask3
+
+#mask3
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -10,7 +11,7 @@
 	height : 79px;
     z-index: 3;
 }
-.mask2
+#mask2
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -21,7 +22,7 @@
 	height : 166px;
     z-index: 2;
 }
-.north-america
+#north-america
 {
 	background-image : url(north-america.png);
 	background-repeat : no-repeat;
@@ -32,7 +33,7 @@
 	height : 323px;
     z-index: 0;
 }
-.mask11
+#mask11
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -43,7 +44,7 @@
 	height : 85px;
     z-index: 11;
 }
-.mask9
+#mask9
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -54,7 +55,7 @@
 	height : 85px;
     z-index: 9;
 }
-.mask10
+#mask10
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -65,7 +66,7 @@
 	height : 85px;
     z-index: 10;
 }
-.mask1
+#mask1
 {
     display: block;
 	background : #FFFFFF;
@@ -77,7 +78,7 @@
 	height : 79px;
     z-index: 1;
 }
-.mask6
+#mask6
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -88,7 +89,7 @@
 	height : 80px;
     z-index: 6;
 }
-.mask7
+#mask7
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -99,7 +100,7 @@
 	height : 168px;
     z-index: 7;
 }
-.mask8
+#mask8
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -110,7 +111,7 @@
 	height : 86px;
     z-index: 8;
 }
-.mask4
+#mask4
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -121,7 +122,7 @@
 	height : 166px;
     z-index: 4;
 }
-.mask12
+#mask12
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
@@ -132,7 +133,7 @@
 	height : 85px;
     z-index: 12;
 }
-.mask5
+#mask5
 {
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
