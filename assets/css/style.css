@@ -1,9 +1,5 @@
 /* CSS Document */
 
-#back-image{
-    z-index: 1;
-    position: relative;
-}
 
 .form-control{
     text-align: center;
@@ -20,11 +16,6 @@
 .container1{
     width: 400px;
     height: 323;
-    background-color: #000000;
-}
-
-.container2{
-     width: 50%;
 }
 
 #ttlWins{
@@ -39,4 +30,13 @@
     display: flex;
     width: 10em;
     align-items: flex-end;
+}
+
+#currentWord{
+    text-align: center;
+
+}
+
+#currentWordDiv{
+    text-align: center;
 }
