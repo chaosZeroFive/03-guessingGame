@@ -2,7 +2,8 @@
 
 #mask3
 {
-	background : #FFFFFF;
+	display: block;
+    background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
 	left : 299px;
@@ -13,6 +14,7 @@
 }
 #mask2
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -35,6 +37,7 @@
 }
 #mask11
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -46,6 +49,7 @@
 }
 #mask9
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -57,6 +61,7 @@
 }
 #mask10
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -80,6 +85,7 @@
 }
 #mask6
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -91,6 +97,7 @@
 }
 #mask7
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -102,6 +109,7 @@
 }
 #mask8
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -113,6 +121,7 @@
 }
 #mask4
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -124,6 +133,7 @@
 }
 #mask12
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
@@ -135,6 +145,7 @@
 }
 #mask5
 {
+    display: block;
 	background : #FFFFFF;
 	background : rgba(255, 255, 255, 1);
 	position : absolute ;
