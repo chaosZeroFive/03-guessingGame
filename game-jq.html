@@ -1,18 +1,5 @@
 <!doctype html>
-<html>
-<!--_Logic:
-        1.  player clicks "New Game"
-        2.  function randomly selects word from array
-        3.  Grid is generated IAW the word selected
-        4.  All input fields and counter are cleared
-        5.  Alert prompts player to click ok when ready
-        6.  player presses a key (A-Z)
-        7.  Event is analyzed
-            7a. if key equals one of the letters in the word the event result is sent to appropriate field
-            7b. if key does not equal one the letters it is saved to failed field and a message is displayed
-        8.  If player selects a correct letter a conditional function hides the masks covering the image
-Works Cited: https://vdelariva.github.io/Word-Guess-Game/
--->
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -64,6 +51,7 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
     <!--back ground image with twelve white images covering the image behind them-->
       <div class="container container1">
         <div class="row">
+<<<<<<< HEAD
             <div class="col">
                 <img src="assets/images/1x/north-america.png" class="img-fluid" id="back-image" alt="revealed-image">
                 <img src="assets/images/1x/mask1.png" class="mask1" id="" alt="mask">
@@ -78,12 +66,42 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
                 <img src="assets/images/1x/mask10.png" class="mask10" alt="mask">
                 <img src="assets/images/1x/mask11.png" class="mask11" alt="mask">
                 <img src="assets/images/1x/mask12.png" class="mask12" alt="mask">
+=======
+            <div class="col-2">
+                <hr>
+            </div>
+            <div class="col-8" id="currentWordDiv">
+                <div class="badge-primary" id="currentWord"></div>
+            </div>
+            <div class="col-2">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="assets/images/1x/north-america.png" class="img-fluid"i d="back-image" alt="revealed-image">
+                <img src="assets/images/1x/mask1.png" id="mask1" alt="mask 1">
+                <img src="assets/images/1x/mask2.png" id="mask2" alt="mask 2">
+                <img src="assets/images/1x/mask3.png" id="mask3" alt="mask 3">
+                <img src="assets/images/1x/mask4.png" id="mask4" alt="mask 4">
+                <img src="assets/images/1x/mask5.png" id="mask5" alt="mask 5">
+                <img src="assets/images/1x/mask6.png" id="mask6" alt="mask 6">
+                <img src="assets/images/1x/mask7.png" id="mask7" alt="mask 7">
+                <img src="assets/images/1x/mask8.png" id="mask8" alt="mask 8">
+                <img src="assets/images/1x/mask9.png" id="mask9" alt="mask 9">
+                <img src="assets/images/1x/mask10.png" id="mask10" alt="mask 10">
+                <img src="assets/images/1x/mask11.png" id="mask11" alt="mask 11">
+                <img src="assets/images/1x/mask12.png" id="mask12" alt="mask 12">
+>>>>>>> origin/master
             </div>
         </div>
     </div>
     <br>
     <hr>
     <br>
+<<<<<<< HEAD
+    <script>
+=======
     <!--buttons to manually test toggling mask images block to none -->
     <div class="container container2">
         <div class="row">
@@ -130,10 +148,13 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
         
     </script>
     <script type="text/javascript">
+>>>>>>> origin/master
         $( document).ready(function(){
+//***********************************************************declaration of variables***********************************************************
             //need a place to put the game info
             //----need a var to hold game status
             var gamePause = false;
+            
             //----need var for array of possible words
             var possibleWords = ['North America', 'South America', 'Asia', 'Europe', 'Australia', 'Africa'];
             
@@ -163,10 +184,21 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
             
             //----need var to store total number of wins
             var ttlWins = 0;
+<<<<<<< HEAD
             $('#spanTtlWins').html(ttlWins);
+=======
+            
+            //----need a var to create an audio element for correct guess
+            var correctSound = document.createElement('audio');
+            
+            //----need a var to create an audio element for incorrect guess
+            var incorrectSound = document.createElement('audio');
+>>>>>>> origin/master
+            
+            //need a var to hold a boolean element for validating a guess was correct
             
             
-            //application prepares for new game
+//***********************************************************application initialize***********************************************************
             //----clears variables
             
             //----set total number of guesses to zero
@@ -183,11 +215,12 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
             
             //----selects random word from possible words array
             //----var v holds the randomly selected value from possibleWords
-            //--------How: by generating a random number between 0 and 1, then round that number down to the nearest integer, and finally convert the string to upper case
-            var v = possibleWords[Math.floor(Math.random() * (possibleWords.length))].toUpperCase();
-                console.log(v);
+            //--------How: by generating a random number between 0 and 1, then round that number down to the nearest integer, and convert the string to upper case
             
-            //--------store the word as a string
+            var randomWord = possibleWords[Math.floor(Math.random() * (possibleWords.length))].toUpperCase();
+                console.log(randomWord);
+            //string is then inserted into div element
+            document.getElementById('currentWord').innerHTML = randomWord;
             
             //------------get the length of the string
             
@@ -198,19 +231,39 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
             //--------find spaces in the string
             
             //--------display something in place of the letters of the word
-            
+    
             //alert player game is ready
             //player guesses a letter and presses keyboard to begin the game
+<<<<<<< HEAD
+            
+=======
             //$(document).keypress(function(event){
                 
             //});
+>>>>>>> origin/master
             
             //application determines if the letter exists in the word
+            
             //----application adds 1 key press event to total guesses
             //--------if the letter is not found application adds 1 to incorrect guesses
             //--------if the letter does exist in the word the application executes a loop to:
             //------------adds adds 1 to correct guesses
             //------------calls function to play a sound
+            function playSound(letter){
+                var foundLetter = false;
+                correctSound.setAttribute('src', '/assets/sounds/correct.mp3');
+                incorrectSound.setAttribute('src', '/assets/sounds/incorrect.mp3');
+                
+                for (var i=0, j=randomWord.length; i<j; i++){
+                    if(letter === randomWord[i]){
+                        randomWord[i] = letter;
+                        foundLetter = true;
+                        correctSound.play();
+                    }
+                }
+            }
+            
+            
             //------------calls a function to hide an image
             //------------reveal the letter in the word
             //player guesses all letters
