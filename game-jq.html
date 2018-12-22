@@ -45,42 +45,39 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
             <li class="nav-item active">
                 <!-- displays total games player has won -->
                 <span class="badge badge-primary game-info">Total Wins</span>
-                <span id="totalWins"></span>
+                <span id="spanTtlWins"></span>
             </li>
             <li class="nav-item active">
                 <!-- displays the word to be guessed that is masked until player guesses correct letter -->
                 <span class="badge badge-primary game-info">Guesses</span>
-                <span id="guessedLetters"></span>
+                <span id="spanTtlGuess"></span>
             </li>
             <li class="nav-item active">
                 <!-- displays the number of guesses that remain -->
                 <span class="badge badge-primary game-info">Guesses Remaining</span>
-                <span id="remainingGuesses"></span>
+                <span id="spanRemGuess"></span>
             </li>
         </ul>
     </nav>
     <hr>
     
     <!--back ground image with twelve white images covering the image behind them-->
-    <div class="container container1">
+      <div class="container container1">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4" id="currentWord"></div>
-            <div class="col-4"></div>
             <div class="col">
                 <img src="assets/images/1x/north-america.png" class="img-fluid" id="back-image" alt="revealed-image">
-                <img src="assets/images/1x/mask1.png" id="mask1" alt="mask 1">
-                <img src="assets/images/1x/mask2.png" id="mask2" alt="mask 2">
-                <img src="assets/images/1x/mask3.png" id="mask3" alt="mask 3">
-                <img src="assets/images/1x/mask4.png" id="mask4" alt="mask 4">
-                <img src="assets/images/1x/mask5.png" id="mask5" alt="mask 5">
-                <img src="assets/images/1x/mask6.png" id="mask6" alt="mask 6">
-                <img src="assets/images/1x/mask7.png" id="mask7" alt="mask 7">
-                <img src="assets/images/1x/mask8.png" id="mask8" alt="mask 8">
-                <img src="assets/images/1x/mask9.png" id="mask9" alt="mask 9">
-                <img src="assets/images/1x/mask10.png" id="mask10" alt="mask 10">
-                <img src="assets/images/1x/mask11.png" id="mask11" alt="mask 11">
-                <img src="assets/images/1x/mask12.png" id="mask12" alt="mask 12">
+                <img src="assets/images/1x/mask1.png" class="mask1" id="" alt="mask">
+                <img src="assets/images/1x/mask2.png" class="mask2" alt="mask">
+                <img src="assets/images/1x/mask3.png" class="mask3" alt="mask">
+                <img src="assets/images/1x/mask4.png" class="mask4" alt="mask">
+                <img src="assets/images/1x/mask5.png" class="mask5" alt="mask">
+                <img src="assets/images/1x/mask6.png" class="mask6" alt="mask">
+                <img src="assets/images/1x/mask7.png" class="mask7" alt="mask">
+                <img src="assets/images/1x/mask8.png" class="mask8" alt="mask">
+                <img src="assets/images/1x/mask9.png" class="mask9" alt="mask">
+                <img src="assets/images/1x/mask10.png" class="mask10" alt="mask">
+                <img src="assets/images/1x/mask11.png" class="mask11" alt="mask">
+                <img src="assets/images/1x/mask12.png" class="mask12" alt="mask">
             </div>
         </div>
     </div>
@@ -142,10 +139,10 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
             
             //----need var to store string for word that was selected from array of possible words
             var selectedWord = "";
-            
+            $('#spanSelWord').html(selectedWord);
             //----need var to store maximum number of guesses allowed
             var ttlGuess = 0;
-            
+            $('#spanTtlGuess').html(ttlGuess);
             //----need var to store the number of incorrect guesses
             var incorrectGuess = 0;
             
@@ -166,7 +163,7 @@ Works Cited: https://vdelariva.github.io/Word-Guess-Game/
             
             //----need var to store total number of wins
             var ttlWins = 0;
-            
+            $('#spanTtlWins').html(ttlWins);
             
             
             //application prepares for new game
